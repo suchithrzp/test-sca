@@ -1,5 +1,5 @@
 # Vulnerable dependencies (intentionally old versions with known CVEs)
-Django==2.2.0              # CVE-2019-14232, CVE-2019-14233, CVE-2019-14234, CVE-2019-14235
+Django==4.2.21              # CVE-2019-14232, CVE-2019-14233, CVE-2019-14234, CVE-2019-14235
 Flask==1.0.0               # CVE-2018-1000656
 requests==2.19.1           # CVE-2018-18074
 Pillow==6.2.0              # CVE-2019-16865, CVE-2020-5312
