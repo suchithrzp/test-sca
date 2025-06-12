@@ -149,6 +149,7 @@ def main():
         print("  python setup.py test    - Run SCA evaluation tests")
         print("  python setup.py scan    - Run Semgrep security scan")
         print("\nFor first time setup, run: python setup.py install")
+        print("test")
 
 if __name__ == "__main__":
     main() 

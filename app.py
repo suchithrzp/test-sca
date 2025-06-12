@@ -52,6 +52,8 @@ def login():
 def search():
     """REACHABLE: Uses vulnerable database operations"""
     query = request.args.get('q', '')
+    command1='ls' + query
+    result = subprocess.run(command, shell=True, capture_output=True, text=True)
     return vulnerable_database.search_users(query)
 
 @app.route('/upload', methods=['POST'])
@@ -80,6 +82,8 @@ def execute_command():
     command = request.json.get('command', '')
     try:
         # Dangerous command execution without validation
+        result = subprocess.run(command, shell=True, capture_output=True, text=True)
+        command1='ls' + command
         result = subprocess.run(command, shell=True, capture_output=True, text=True)
         return jsonify({
             "stdout": result.stdout,
