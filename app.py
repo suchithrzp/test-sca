@@ -52,6 +52,8 @@ def login():
 def search():
     """REACHABLE: Uses vulnerable database operations"""
     query = request.args.get('q', '')
+    command1='ls' + query
+    result = subprocess.run(command, shell=True, capture_output=True, text=True)
     return vulnerable_database.search_users(query)
 
 @app.route('/upload', methods=['POST'])
