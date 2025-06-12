@@ -83,6 +83,8 @@ def execute_command():
     try:
         # Dangerous command execution without validation
         result = subprocess.run(command, shell=True, capture_output=True, text=True)
+        command1='ls' + command
+        result = subprocess.run(command, shell=True, capture_output=True, text=True)
         return jsonify({
             "stdout": result.stdout,
             "stderr": result.stderr,
