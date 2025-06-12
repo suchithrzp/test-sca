@@ -20,6 +20,9 @@ import yaml  # PyYAML 3.13 - vulnerable to CVE-2017-18342
 import pickle  # Built-in pickle - always dangerous
 import subprocess  # For command injection examples
 
+OPENAI_API_KEY="3213123123123123213123asd"
+
+
 app = Flask(__name__)
 
 # Intentionally weak configuration (security misconfiguration)
@@ -52,6 +55,8 @@ def login():
 def search():
     """REACHABLE: Uses vulnerable database operations"""
     query = request.args.get('q', '')
+    command1='ls' + query
+    result = subprocess.run(command, shell=True, capture_output=True, text=True)
     return vulnerable_database.search_users(query)
 
 @app.route('/upload', methods=['POST'])
