@@ -9,6 +9,8 @@ import subprocess
 import venv
 from pathlib import Path
 
+API_KEY="ghp_aaaaatFXeLxDuU1ENaaaaaaatvot6y4dNfff"
+
 def create_virtual_environment():
     """Create a virtual environment for the project"""
     venv_path = Path("venv")
