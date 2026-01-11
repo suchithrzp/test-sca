@@ -7,7 +7,7 @@ PyYAML==3.13               # CVE-2017-18342
 Jinja2==2.10               # CVE-2019-10906
 SQLAlchemy==1.2.0          # CVE-2019-7164, CVE-2019-7548
 cryptography==2.3         # CVE-2018-10903
-urllib3==1.24.1            # CVE-2019-11324, CVE-2019-11236
+urllib3==2.6.3            # CVE-2019-11324, CVE-2019-11236
 lxml==4.2.0                # CVE-2018-19787, CVE-2020-27783
 paramiko==2.4.0            # CVE-2018-1000805
 psycopg2==2.7.5            # CVE-2020-25694
